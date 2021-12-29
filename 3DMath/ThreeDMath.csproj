@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ThreeDMath</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="Color.cs" />
+    <Compile Remove="Curve.cs" />
+    <Compile Remove="CurveContinuity.cs" />
+    <Compile Remove="CurveKey.cs" />
+    <Compile Remove="CurveKeyCollection.cs" />
+    <Compile Remove="CurveLoopType.cs" />
+    <Compile Remove="CurveTangent.cs" />
+    <Compile Remove="DisplayOrientation.cs" />
+    <Compile Remove="DrawableGameComponent.cs" />
+    <Compile Remove="FNALoggerEXT.cs" />
+    <Compile Remove="FrameworkDispatcher.cs" />
+    <Compile Remove="Game.cs" />
+    <Compile Remove="GameComponent.cs" />
+    <Compile Remove="GameComponentCollection.cs" />
+    <Compile Remove="GameComponentCollectionEventArgs.cs" />
+    <Compile Remove="GameServiceContainer.cs" />
+    <Compile Remove="GameTime.cs" />
+    <Compile Remove="GameWindow.cs" />
+    <Compile Remove="GraphicsDeviceInformation.cs" />
+    <Compile Remove="GraphicsDeviceManager.cs" />
+    <Compile Remove="IDrawable.cs" />
+    <Compile Remove="IGameComponent.cs" />
+    <Compile Remove="IGraphicsDeviceManager.cs" />
+    <Compile Remove="IUpdateable.cs" />
+    <Compile Remove="LaunchParameters.cs" />
+    <Compile Remove="NamespaceDocs.cs" />
+    <Compile Remove="PlayerIndex.cs" />
+    <Compile Remove="PreparingDeviceSettingsEventArgs.cs" />
+    <Compile Remove="TitleContainer.cs" />
+    <Compile Remove="TitleLocation.cs" />
+  </ItemGroup>
+
+</Project>
