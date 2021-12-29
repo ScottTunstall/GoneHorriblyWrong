@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>_3DWireframeV2</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ThreeDMath\Color.cs" />
+    <Compile Remove="ThreeDMath\DisplayOrientation.cs" />
+    <Compile Remove="ThreeDMath\DrawableGameComponent.cs" />
+    <Compile Remove="ThreeDMath\FNALoggerEXT.cs" />
+    <Compile Remove="ThreeDMath\FrameworkDispatcher.cs" />
+    <Compile Remove="ThreeDMath\Game.cs" />
+    <Compile Remove="ThreeDMath\GameComponent.cs" />
+    <Compile Remove="ThreeDMath\GameComponentCollection.cs" />
+    <Compile Remove="ThreeDMath\GameComponentCollectionEventArgs.cs" />
+    <Compile Remove="ThreeDMath\GameServiceContainer.cs" />
+    <Compile Remove="ThreeDMath\GameTime.cs" />
+    <Compile Remove="ThreeDMath\GameWindow.cs" />
+    <Compile Remove="ThreeDMath\GraphicsDeviceInformation.cs" />
+    <Compile Remove="ThreeDMath\GraphicsDeviceManager.cs" />
+    <Compile Remove="ThreeDMath\IDrawable.cs" />
+    <Compile Remove="ThreeDMath\IGameComponent.cs" />
+    <Compile Remove="ThreeDMath\IGraphicsDeviceManager.cs" />
+    <Compile Remove="ThreeDMath\IUpdateable.cs" />
+    <Compile Remove="ThreeDMath\LaunchParameters.cs" />
+    <Compile Remove="ThreeDMath\NamespaceDocs.cs" />
+    <Compile Remove="ThreeDMath\PlayerIndex.cs" />
+    <Compile Remove="ThreeDMath\PreparingDeviceSettingsEventArgs.cs" />
+    <Compile Remove="ThreeDMath\TitleContainer.cs" />
+    <Compile Remove="ThreeDMath\TitleLocation.cs" />
+  </ItemGroup>
+
+</Project>
