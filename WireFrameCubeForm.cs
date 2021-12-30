@@ -144,7 +144,7 @@ namespace _3DWireframeV2
         {
             this.Invalidate();
 
-            Matrix rotationMatrix = Matrix.CreateRotationY(MathHelper.ToRadians(1f));
+            Matrix rotationMatrix = Matrix.CreateRotationX(MathHelper.ToRadians(1f));
             _camPosition = Vector3.Transform(_camPosition, rotationMatrix);
 
             _projectionMatrix = Matrix.CreatePerspectiveFieldOfView(

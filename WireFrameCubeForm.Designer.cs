@@ -35,6 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.DoubleBuffered = true;
             this.Name = "WireFrameCubeForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.WireframeCubeForm_Load);
