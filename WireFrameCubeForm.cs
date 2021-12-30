@@ -15,7 +15,6 @@ namespace _3DWireframeV2
         private Vector3 _camPosition;
         private Matrix _projectionMatrix;
         private Matrix _viewMatrix;
-        private Matrix _worldMatrix;
 
 
         public WireFrameCubeForm()
@@ -31,10 +30,6 @@ namespace _3DWireframeV2
             _viewMatrix = Matrix.CreateLookAt(_camPosition, _camTarget,
                 new Vector3(0f, 1f, 0f));// Y up
             
-            _worldMatrix = Matrix.CreateWorld(_camTarget, Vector3.
-                Forward, Vector3.Up);
-
-
             _timer.Tick += _timer_Tick;
         }
 
@@ -51,20 +46,26 @@ namespace _3DWireframeV2
         {
             e.Graphics.Clear(Color.LightBlue);
 
-            var projected = new Vector3[8];
+            var projected = new Vector2[8];
             for (var i = 0; i < _vertices.Length; i++)
             {
                 var vertex = _vertices[i];
-                var matrix = Matrix.CreateRotationX(_angle) *
-                             Matrix.CreateRotationY(_angle) *
-                             Matrix.CreateRotationZ(_angle) *
-                             _projectionMatrix *
+                var matrix = //_worldMatrix *
                              _viewMatrix *
-                             _worldMatrix;
+                             _projectionMatrix;
 
-                // if you comment out 2 Rotates then you can see the cube rotating round the relevant axes 
-                var transformed = Vector3.Transform(vertex, matrix);
-                projected[i] = transformed;
+                var transformed = Vector4.Transform(vertex, matrix);
+
+                // normalize if w is different than 1 (convert from homogeneous to Cartesian coordinates)
+                if (transformed.W != 1)
+                {
+                    transformed.X /= transformed.W;
+                    transformed.Y /= transformed.W;
+                }
+
+                projected[i] = new Vector2(transformed.X, transformed.Y);
+                projected[i] *= new Vector2(1000, 1000 * Height / Width);
+                projected[i] += new Vector2(Width / 2, Height / 2);
             }
 
             for (var j = 0; j < 6; j++)
